@@ -2,7 +2,7 @@
 
 This is a draft of the pipeline used to obtain data and process it using the different programs we learned in class. 
 
-# Protocol for processing of data for Final Project - FS 590
+# Data processing protocol for Final Project - FS 590
 
 ## Get the .fna (genome assembly sequenece) from [NCBI_assembly](https://www.ncbi.nlm.nih.gov/assembly/)
 
