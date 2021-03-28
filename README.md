@@ -68,7 +68,7 @@ cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <o
 
 -Use `scp` to copy the results of TIGRFam (.tsv), PFamm (.tsv), and CAZy (.stringent) to your computer.
 
-## Run BLASTKoala with taxonomy id and Genus
+## Running BLASTKoala
 
 -Submit your aminoacid file downloaded from RAST to [BlastKOALA](https://www.kegg.jp/blastkoala/)
 
