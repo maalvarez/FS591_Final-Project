@@ -30,23 +30,35 @@ Let us know if you will need an account to submit your file.
 
 - Copy the aminoacid fasta file to the folder you created with 
 
-```scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>```
+```
+scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>
+```
 
 - Run TIGRFam
 
-```hmmsearch –o <organism name>.YOUR_INITIALS.TIGR –-tblout <organism name>.YOUR_INITIALS.TIGR.tsv --cut_tc ../../../data/TIGRFAMs_14.0_HMM.LIB <your RAST output amino acid fasta file>```
+```
+hmmsearch –o <organism name>.YOUR_INITIALS.TIGR –-tblout <organism name>.YOUR_INITIALS.TIGR.tsv --cut_tc ../../../data/TIGRFAMs_14.0_HMM.LIB <your RAST output amino acid fasta file>
+```
 
 - Run PFamm
 
-```hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file```
+```
+hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file
+```
 
 - Run CAZy
 
-```hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file > <organism name>.YOUR_INITIALS.CAZy.out```
+```
+hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file > <organism name>.YOUR_INITIALS.CAZy.out
+```
 
-```sh ../../../data/hmmscan-parser.sh <organism name>.YOUR_INITIALS.CAZy.out.dm > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps```
+```
+sh ../../../data/hmmscan-parser.sh <organism name>.YOUR_INITIALS.CAZy.out.dm > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps
+```
 
-```cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps.stringent```
+```
+cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps.stringent
+```
 
 ***This code assume that you are located in your organism folder in the cluster, have the amino acid file in this folder, started interactive mode, and loaded the required modules: bioinfo and HMMER. (You can use the script file "Final_project.sb" to run all the commands as a batch)***
 
