@@ -8,7 +8,7 @@ This is a draft of the pipeline used to obtain data and process it using the dif
 
 - Search for your organism.
 - Press the "Download Assembly" button. 
-- Select "GeneBank" from dropdown menu in Source database (GenBank or RefSeq) and "Genomic fasta (.fna) from dropdown menu in File type. 
+- Select "GeneBank" from dropdown menu in Source database (GenBank or RefSeq) and "Genomic fasta (.fna)" from dropdown menu in File type. 
 - Press the Download button.
 
 ## Submit the .fna file to [RAST](https://rast.nmpdr.org). 
