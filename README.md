@@ -94,7 +94,7 @@ It may take at least 1 day for the job to be completed after submission.
 
 -In the excel file downloaded from RAST, add more columns and copy the results of each analysis usin the function `vlookup`, as showed in class.
 
--Once you have all of the results organized in columns, save your file as .csv and copy it to your folder in the cluster: /depot/lindems-class/peptide/SANGER/<organism name>
+-Once you have all of the results organized in columns, save your file as .csv and copy it to your folder in the cluster: /depot/lindems-class/peptide/SANGER/organism_name
 
 ## Strategy for anotation
 
