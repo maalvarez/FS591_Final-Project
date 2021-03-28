@@ -6,9 +6,12 @@ This is a draft of the pipeline used to obtain data and process it using the dif
 
 ## Get the .fna (genome assembly sequenece) from [NCBI_assembly](https://www.ncbi.nlm.nih.gov/assembly/)
 
--Search for your organism.
+-Search for your organism
+
 -Press the "Download Assembly" button. 
+
 -Select "GeneBank" from dropdown menu in Source database (GenBank or RefSeq) and "Genomic fasta (.fna)" from dropdown menu in File type. 
+
 -Press the Download button.
 
 ## Submit the .fna file to [RAST](https://rast.nmpdr.org). 
@@ -22,6 +25,7 @@ Let us know if you will need an account to submit your file.
   * Automatic frameshift unchecked
 
 -Wait until the job is completed. It may take 1 - 2 days for the job to be completed. 
+
 -Once the job is completed, download the "Aminoacid-Fasta file" and "Spreadsheet (Excel XLS format)" from the dropdown menu of "Available downloads for this job"
 
 ## Working in the cluster
