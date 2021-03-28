@@ -29,7 +29,7 @@ Create a folder in /peptide/SANGER with the name of your organism with `mkdir <o
 
 Copy the aminoacid fasta file to the folder you created with 
 
-`scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>`.
+```scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>```.
 
 Run TIGRFam, 
 
