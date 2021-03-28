@@ -1,6 +1,6 @@
-# FS591_final-projet
+# Final Project (FS - 591)
 
-This is the draft of the pipeline used to obtain data and process it using the different programs we learned in class. 
+This is a draft of the pipeline used to obtain data and process it using the different programs we learned in class. 
 
 # Protocol for processing of data for Final Project - FS 590
 
