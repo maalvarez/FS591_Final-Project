@@ -6,7 +6,7 @@ This is a draft of the pipeline used to obtain data and process it using the dif
 
 ## Get the .fna (genome assembly sequenece) from [NCBI_assembly](https://www.ncbi.nlm.nih.gov/assembly/)
 
--Search for your organism
+-Search for your organism.
 
 -Press the "Download Assembly" button. 
 
@@ -19,7 +19,7 @@ This is a draft of the pipeline used to obtain data and process it using the dif
 Let us know if you will need an account to submit your file. 
 
 -Use the following options when prompted:
-  * Use NCBI's Taxonomy ID to fillout all the data of the organism.
+  * Use NCBI's Taxonomy ID to fillout all the data of the organism
   * Rasttk
   * Automatic error option checked 
   * Automatic frameshift unchecked
