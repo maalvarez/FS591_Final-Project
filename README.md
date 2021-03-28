@@ -29,25 +29,25 @@ Create a folder in /peptide/SANGER with the name of your organism with `mkdir <o
 
 Copy the aminoacid fasta file to the folder you created with 
 
-```scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>```.
+```scp <fasta file> <username>@scholar.rcac.purdue.edu:/depot/lindems-class/peptide/SANGER/<organism name>```
 
 Run TIGRFam, 
 
-`hmmsearch –o <organism name>.YOUR_INITIALS.TIGR –-tblout <organism name>.YOUR_INITIALS.TIGR.tsv --cut_tc ../../../data/TIGRFAMs_14.0_HMM.LIB <your RAST output amino acid fasta file>`
+```hmmsearch –o <organism name>.YOUR_INITIALS.TIGR –-tblout <organism name>.YOUR_INITIALS.TIGR.tsv --cut_tc ../../../data/TIGRFAMs_14.0_HMM.LIB <your RAST output amino acid fasta file>```
 
 PFamm, 
 
-`hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file`
+```hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file```
 
 and CAZy
 
-`hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file > <organism name>.YOUR_INITIALS.CAZy.out`
+```hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file > <organism name>.YOUR_INITIALS.CAZy.out```
 
-`sh ../../../data/hmmscan-parser.sh <organism name>.YOUR_INITIALS.CAZy.out.dm > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps`
+```sh ../../../data/hmmscan-parser.sh <organism name>.YOUR_INITIALS.CAZy.out.dm > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps```
 
-`cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps.stringent`
+```cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps.stringent```
 
-This code assume that you are in your organism file, you have the amino acid file in this folder, you are in interactive mode and you loaded the required modules: bioinfo and HMMER. (You can use the script file "Final_project.sb" to run all the commands as a batch)
+This code assume that you are located in your organism folder in the cluster, have the amino acid file in this folder, started interactive mode, and loaded the required modules: bioinfo and HMMER. (You can use the script file "Final_project.sb" to run all the commands as a batch)
 
 Use `scp` to copy the results of TIGRFam (.tsv), PFamm (.tsv), and CAZy (.stringent) to your computer.
 
@@ -55,16 +55,19 @@ Use `scp` to copy the results of TIGRFam (.tsv), PFamm (.tsv), and CAZy (.string
 
 Submit your aminoacid file downloaded from RAST to [BlastKOALA](https://www.kegg.jp/blastkoala/)
 
-Use the followin options:
+Use the following options:
+
 * Bacteria
 * genus_prokaryotes
 
 It may take at least 1 day for the job to be completed after submission. 
-After receiving the email with the link to the results of your submission, go to "view" and click in "Download detail". This will show you more info that the other "Download option": Query, KO, Definition, Score, and Second best
+
+After receiving the email with the link to the results of your submission, go to "view" and click in "Download detail". This will show you more info than the other option: Query, KO, Definition, Score, and Second best
 
 ## Gathering the data and data organization
 
 At this point you should have the following files in your computer:
+
 * Spreadsheet (Excel XLS format) from RAST
 * TIGRFam (.tsv) results
 * PFamm (.tsv) results
@@ -72,7 +75,7 @@ At this point you should have the following files in your computer:
 * BlastKoala results
 * TIGRFam Info. You can donwload this file :[TIGRFAMs_improvements_2018-10-11.tsv](https://ftp.ncbi.nlm.nih.gov/hmm/TIGRFAMs/TIGRFAMs_improvements_2018-10-11.tsv)
 
-In the Spreedsheet file downloaded from RAST you can add more columns and copy the results of each analysis usin the function `vlookup`, as showed in class.
+In the excel file downloaded from RAST you can add more columns and copy the results of each analysis usin the function `vlookup`, as showed in class.
 
 Once you have all of the results organized in columns save your file as .csv and copy it to your folder in the cluster "/depot/lindems-class/peptide/SANGER/<organism name>"
 
