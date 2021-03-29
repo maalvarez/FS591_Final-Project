@@ -64,7 +64,7 @@ sh ../../../data/hmmscan-parser.sh <organism name>.YOUR_INITIALS.CAZy.out.dm > <
 cat <organism name>.YOUR_INITIALS.CAZy.out.dm.ps | awk '$5<1e-15&&$10>0.35' > <organism name>.YOUR_INITIALS.CAZy.out.dm.ps.stringent
 ```
 
-***This code assume that you are located in your organism folder in the cluster, have the amino acid file in this folder, started interactive mode, and loaded the required modules: bioinfo and HMMER. (You can use the script file "Final_project.sb" to run all the commands as a batch)***
+***This code assumes that you are located in your organism folder in the cluster, have the amino acid file in this folder, started interactive mode, and loaded the required modules: bioinfo and HMMER. (You can use the script file "Final_project.sb" to run all the commands as a batch). If the batch file does not work for you, run the commands one by one and double check the names you are using.***
 
 -Use `scp` to copy the results of TIGRFam (.tsv), PFamm (.tsv), and CAZy (.stringent) to your computer.
 
@@ -98,3 +98,4 @@ It may take at least 1 day for the job to be completed after submission.
 
 ## Strategy for anotation
 
+TBD
