@@ -47,13 +47,13 @@ hmmsearch –o <organism name>.YOUR_INITIALS.TIGR –-tblout <organism name>.YOU
 -Run PFamm
 
 ```
-hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file
+hmmsearch –o <organism name>.YOUR_INITIALS.Pfam –-tblout <organism name>.YOUR_INITIALS.Pfam.tsv--cut_tc ../../../data/Pfam-A.hmm <your RAST output amino acid fasta file>
 ```
 
 -Run CAZy
 
 ```
-hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file > <organism name>.YOUR_INITIALS.CAZy.out
+hmmscan --domtblout <organism name>.YOUR_INITIALS.CAZy.out.dm ../../../data/dbCAN-HMMdb-V9.txt <your_RAST_output_amino_acid_fasta_file> > <organism name>.YOUR_INITIALS.CAZy.out
 ```
 
 ```
